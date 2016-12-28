@@ -5,36 +5,36 @@
 
     {% if page.typeMain %}
 
-      {% set image = '<img src="images/' + page.imageSrc + '" alt="' + page.imageAlt + '" width="' + page.imageWidth + '">' %}
+      {% set image = '<img class="page__img" src="images/' + page.imageSrc + '" alt="' + page.imageAlt + '" width="' + page.imageWidth + '">' %}
       <section class="page page--main">
         {% if page.imageFirst %}
           {{ image | safe }}
-          <p>{{ page.text | safe }}</p>
+          <p class="page__text">{{ page.text | safe }}</p>
         {% else %}
-          <p>{{ page.text | safe }}</p>
+          <p class="page__text">{{ page.text | safe }}</p>
           {{ image | safe }}
         {% endif %}
       </section>
 
     {% elseif page.typeHome %}
 
-      {% set imageTop = '<img src="images/' + page.imageTopSrc + '" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '">' %}
-      {% set imageBottom = '<img src="images/' + page.imageBottomSrc + '" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '">' %}
-      <section class="page page--home">
+      {% set imageTop = '<img class="header__img-top" src="images/' + page.imageTopSrc + '" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '">' %}
+      {% set imageBottom = '<img class="header__img-bottom" src="images/' + page.imageBottomSrc + '" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '">' %}
+      <section class="page header">
         {{ imageTop | safe }}
         {{ imageBottom | safe }}
       </section>
 
     {% elseif page.typeIntro %}
 
-      <section class="page {{ page.classes }}">
-        <div>{{ page.text | safe }}</div>
+      <section class="page">
+        <div class="{{ page.classes }}">{{ page.text | safe }}</div>
       </section>
 
     {% elseif page.typeSingleText %}
 
       <section class="page {{ page.classes }}">
-        <div>{{ page.text | safe }}</div>
+        <div class="page__text">{{ page.text | safe }}</div>
       </section>
 
     {% elseif page.typeSingleImage %}

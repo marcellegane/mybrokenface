@@ -2,4 +2,26 @@
 //  $Header
 //------------------------------------------------------------------------
 
-.header {}
+.header {
+  &.page {
+    justify-content: space-between;
+  }
+
+  &__img-top {
+    width: 72.8%;
+    margin-top: 2em;
+
+    @include media($medium-screen-up) {
+      width: 56%;
+    }
+  }
+
+  &__img-bottom {
+    width: 63.7%;
+    margin-bottom: 2em;
+
+    @include media($medium-screen-up) {
+      width: 49%;
+    }
+  }
+}
