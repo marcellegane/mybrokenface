@@ -12,7 +12,9 @@
 
     {% block head %}{% endblock %}
   </head>
-  <body>
+  <body class="no-js">
+    <script>document.body.className = "js";</script>
+
     {% block content %}{% endblock %}
     {% block javascript %}<script src="javascripts/app.js"></script>{% endblock %}
   </body>

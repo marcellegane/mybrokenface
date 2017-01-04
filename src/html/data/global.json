@@ -2,6 +2,7 @@
   "title": "New Project",
   "pages": [
     {
+      "id": 1,
       "typeHome": true,
       "imageTopSrc": "KateeBook_TitleTop.png",
       "imageTopAlt": "Reflections from a broken face",
@@ -11,16 +12,19 @@
       "imageBottomWidth": "850"
     },
     {
+      "id": 2,
       "typeIntro": true,
       "classes": "page__text",
       "text": "For Calum"
     },
     {
+      "id": 3,
       "typeIntro": true,
       "classes": "page__intro",
       "text": "<p><strong>On Sunday 25th September 2016, I broke my face.</strong></p><p>Playing 11-aside football, I jumped up for a 50/50 challenge to head the ball and then BOOM. Or crack, rather.</p><p>Clinically speaking, I had an &ldquo;open internal reduction of the right zygomatic arch&rdquo;. Meaning: my cheekbone was in pieces and my jaw and eye socket were also cracked. I literally had a broken face.</p><p>The following pages are some random thoughts I had during my recovery. This book was made to mark the end of the healing process. A cathartic reflection of my facial trauma.</p><p>It was also made as a thank you to the people in my life who took such good care of me during a time I couldn't do the two things I love most: eat and play football.</p>"
     },
     {
+      "id": 4,
       "typeMain": true,
       "imageFirst": false,
       "text": "I wish the A&E staff told me not to blow my nose.<br>Because when I did all my bones moved.<br>At least now I know it's broken.",
@@ -29,6 +33,7 @@
       "imageWidth": "247"
     },
     {
+      "id": 5,
       "typeMain": true,
       "imageFirst": true,
       "text": "Somebody needs to put art on the ceilings of hospitals.",
@@ -37,6 +42,7 @@
       "imageWidth": "363"
     },
     {
+      "id": 6,
       "typeMain": true,
       "imageFirst": true,
       "text": "True love is a boyfriend that buys a food processor.",
@@ -45,6 +51,7 @@
       "imageWidth": "225"
     },
     {
+      "id": 7,
       "typeMain": true,
       "imageFirst": false,
       "text": "Please don't ask me if it was painful.<br>I broke my face.<br>Of course it was painful.",
@@ -53,6 +60,7 @@
       "imageWidth": "268"
     },
     {
+      "id": 8,
       "typeMain": true,
       "imageFirst": true,
       "text": "Today I walked 76 steps. It all counts.",
@@ -61,6 +69,7 @@
       "imageWidth": "256"
     },
     {
+      "id": 9,
       "typeMain": true,
       "imageFirst": false,
       "text": "Affogato: breakfast of champions. One part coffee, two parts ice cream.",
@@ -69,6 +78,7 @@
       "imageWidth": "421"
     },
     {
+      "id": 10,
       "typeMain": true,
       "imageFirst": true,
       "text": "Yawned for the first time today since the accident.",
@@ -77,6 +87,7 @@
       "imageWidth": "326"
     },
     {
+      "id": 11,
       "typeMain": true,
       "imageFirst": false,
       "text": "Did you know that you can buy codeine over-the-counter?",
@@ -85,6 +96,7 @@
       "imageWidth": "344"
     },
     {
+      "id": 12,
       "typeMain": true,
       "imageFirst": false,
       "text": "Top tip: baked camembert with a spoon is an excellent meal. So soft.",
@@ -93,6 +105,7 @@
       "imageWidth": "325"
     },
     {
+      "id": 13,
       "typeMain": true,
       "imageFirst": true,
       "text": "There should be labels on hospital gowns so you know which way to wear them. Apparently mine is on backwards.",
@@ -101,6 +114,7 @@
       "imageWidth": "176"
     },
     {
+      "id": 14,
       "typeMain": true,
       "imageFirst": true,
       "text": "Titanium has a 3000 degree Fahrenheit melting point and a hexagonal closed packed atomic structure. It's also corrosion resistant and has a ridiculously high tensile strength. Oh, and it doesn't set off metal detectors.",
@@ -109,6 +123,7 @@
       "imageWidth": "496"
     },
     {
+      "id": 15,
       "typeMain": true,
       "imageFirst": false,
       "text": "Eye tests shouldn't spell real words. It's confusing. Do you read the letters or the words?",
@@ -117,6 +132,7 @@
       "imageWidth": "329"
     },
     {
+      "id": 16,
       "typeMain": true,
       "imageFirst": true,
       "text": "Nurses have to put up with so much shit. And vomit (Sorry).",
@@ -125,6 +141,7 @@
       "imageWidth": "328"
     },
     {
+      "id": 17,
       "typeMain": true,
       "imageFirst": false,
       "text": "Why are there so many pistachios in bircher muesli?",
@@ -133,6 +150,7 @@
       "imageWidth": "390"
     },
     {
+      "id": 18,
       "typeMain": true,
       "imageFirst": true,
       "text": "Thanksgiving. Today I'm thankful that I've never experienced domestic violence.<br>Because I've seen the way people look at me in public like I'm a victim. I'm only a victim of my own competitiveness. It must be hard for sufferers to hide their pain, repeatedly when everyone just stares at you.",
@@ -141,6 +159,7 @@
       "imageWidth": "203"
     },
     {
+      "id": 19,
       "typeMain": true,
       "imageFirst": false,
       "text": "My surgeon gets me to send him selfies (&ldquo;taken in good light&rdquo;) to monitor my progress. The NHS is amazing.",
@@ -149,6 +168,7 @@
       "imageWidth": "379"
     },
     {
+      "id": 20,
       "typeMain": true,
       "imageFirst": false,
       "text": "First solid meal today. Pizza.<br>It took 2 hours to eat and it was blissful.",
@@ -157,6 +177,7 @@
       "imageWidth": "371"
     },
     {
+      "id": 21,
       "typeMain": true,
       "imageFirst": true,
       "text": "In my job contract it says that sick leave is covered in the event of an accident or injury except those &ldquo;sustained whilst playing a dangerous sport&rdquo;. Is football a dangerous sport?",
@@ -165,6 +186,7 @@
       "imageWidth": "546"
     },
     {
+      "id": 22,
       "typeMain": true,
       "imageFirst": true,
       "text": "It's a terrible idea to try and take out your own stitches with toe nail clippers. Let them dissolve on their own or leave it to the professionals.",
@@ -173,6 +195,7 @@
       "imageWidth": "360"
     },
     {
+      "id": 23,
       "typeMain": true,
       "imageFirst": false,
       "text": "Today I walked past the scene of the accident. The physical scars have healed. Emotional ones have not.",
@@ -181,6 +204,7 @@
       "imageWidth": "647"
     },
     {
+      "id": 24,
       "typeMain": true,
       "imageFirst": true,
       "text": "Opiate withdrawal can manifest itself in a lot of ways. For example a face rash.",
@@ -189,6 +213,7 @@
       "imageWidth": "253"
     },
     {
+      "id": 25,
       "typeMain": true,
       "imageFirst": false,
       "text": "12 more days until medical clearance.<br>6 weeks have now passed. Can I be better now?",
@@ -197,10 +222,12 @@
       "imageWidth": "333"
     },
     {
+      "id": 26,
       "typeSingleText": true,
       "text": "Everyday I stare into the mirror and stroke my face. Even though I can't feel it, I just want to make sure it's still there."
     },
     {
+      "id": 27,
       "typeSingleImage": true,
       "imageSrc": "KateeBook_Mirror.png",
       "imageAlt": "Handheld mirror",

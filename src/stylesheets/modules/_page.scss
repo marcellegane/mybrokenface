@@ -4,8 +4,23 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding: 1em;
+  overflow-y: scroll;
+
+  .js & {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+
+    &.is-active {
+      position: relative;
+      opacity: 1;
+      display: flex;
+    }
+  }
 
   &__intro {
     max-width: em(600);
@@ -28,10 +43,6 @@
   &--main {
     > * + * {
       margin-top: 2em;
-
-      @include media($medium-screen-up) {
-        margin-top: 4em;
-      }
     }
   }
 

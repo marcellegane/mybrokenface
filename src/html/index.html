@@ -1,50 +1,51 @@
 {% extends 'layouts/application.html' %}
 {% block content %}
 
-  {% for page in pages %}
+  <main class="carousel">
+    {% for page in pages %}
+      {% if page.typeMain %}
 
-    {% if page.typeMain %}
+        {% set image = '<img class="page__img" src="images/' + page.imageSrc + '" alt="' + page.imageAlt + '" width="' + page.imageWidth + '">' %}
+        <section id="{{ page.id }}" class="page page--main">
+          {% if page.imageFirst %}
+            {{ image | safe }}
+            <p class="page__text">{{ page.text | safe }}</p>
+          {% else %}
+            <p class="page__text">{{ page.text | safe }}</p>
+            {{ image | safe }}
+          {% endif %}
+        </section>
 
-      {% set image = '<img class="page__img" src="images/' + page.imageSrc + '" alt="' + page.imageAlt + '" width="' + page.imageWidth + '">' %}
-      <section class="page page--main">
-        {% if page.imageFirst %}
-          {{ image | safe }}
-          <p class="page__text">{{ page.text | safe }}</p>
-        {% else %}
-          <p class="page__text">{{ page.text | safe }}</p>
-          {{ image | safe }}
-        {% endif %}
-      </section>
+      {% elseif page.typeHome %}
 
-    {% elseif page.typeHome %}
+        {% set imageTop = '<img class="header__img-top" src="images/' + page.imageTopSrc + '" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '">' %}
+        {% set imageBottom = '<img class="header__img-bottom" src="images/' + page.imageBottomSrc + '" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '">' %}
 
-      {% set imageTop = '<img class="header__img-top" src="images/' + page.imageTopSrc + '" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '">' %}
-      {% set imageBottom = '<img class="header__img-bottom" src="images/' + page.imageBottomSrc + '" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '">' %}
-      <section class="page header">
-        {{ imageTop | safe }}
-        {{ imageBottom | safe }}
-      </section>
+        <section id="{{ page.id }}" class="page header is-active">
+          {{ imageTop | safe }}
+          {{ imageBottom | safe }}
+        </section>
 
-    {% elseif page.typeIntro %}
+      {% elseif page.typeIntro %}
 
-      <section class="page">
-        <div class="{{ page.classes }}">{{ page.text | safe }}</div>
-      </section>
+        <section id="{{ page.id }}" class="page">
+          <div class="{{ page.classes }}">{{ page.text | safe }}</div>
+        </section>
 
-    {% elseif page.typeSingleText %}
+      {% elseif page.typeSingleText %}
 
-      <section class="page {{ page.classes }}">
-        <div class="page__text">{{ page.text | safe }}</div>
-      </section>
+        <section id="{{ page.id }}" class="page {{ page.classes }}">
+          <div class="page__text">{{ page.text | safe }}</div>
+        </section>
 
-    {% elseif page.typeSingleImage %}
+      {% elseif page.typeSingleImage %}
 
-      <section class="page {{ page.classes }}">
-        <img src="images/{{ page.imageSrc }}" alt="{{ page.imageAlt }}" width="{{ page.imageWidth }}">
-      </section>
+        <section id="{{ page.id }}" class="page {{ page.classes }}">
+          <img src="images/{{ page.imageSrc }}" alt="{{ page.imageAlt }}" width="{{ page.imageWidth }}">
+        </section>
 
-    {% endif %}
-
-  {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </main>
 
 {% endblock %}
