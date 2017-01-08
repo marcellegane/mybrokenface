@@ -1,51 +1,60 @@
 {% extends 'layouts/application.html' %}
 {% block content %}
 
-  <main class="carousel">
-    {% for page in pages %}
-      {% if page.typeMain %}
+  <main class="main">
+    <div class="carousel">
+      {% for page in pages %}
+        {% if page.typeMain %}
 
-        {% set image = '<img class="page__img" src="images/' + page.imageSrc + '" alt="' + page.imageAlt + '" width="' + page.imageWidth + '">' %}
-        <section id="{{ page.id }}" class="page page--main">
           {% if page.imageFirst %}
-            {{ image | safe }}
-            <p class="page__text">{{ page.text | safe }}</p>
+            {% set imgLoadClass = ' load load-1' %}
           {% else %}
-            <p class="page__text">{{ page.text | safe }}</p>
-            {{ image | safe }}
+            {% set imgLoadClass = ' load load-2' %}
           {% endif %}
-        </section>
+          {% set image = '<div class="page__img-container' + imgLoadClass + '"><img class="page__img" src="images/' + page.imageSrc + '" alt="' + page.imageAlt + '" width="' + page.imageWidth + '"></div>' %}
+          <section id="{{ page.id }}" class="page page--main">
+            {% if page.imageFirst %}
+              {{ image | safe }}
+              <p class="page__text load load-2">{{ page.text | safe }}</p>
+            {% else %}
+              <p class="page__text load load-1">{{ page.text | safe }}</p>
+              {{ image | safe }}
+            {% endif %}
+          </section>
 
-      {% elseif page.typeHome %}
+        {% elseif page.typeHome %}
 
-        {% set imageTop = '<img class="header__img-top" src="images/' + page.imageTopSrc + '" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '">' %}
-        {% set imageBottom = '<img class="header__img-bottom" src="images/' + page.imageBottomSrc + '" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '">' %}
+          {% set imageTop = '<div class="page__img-container load load-1"><img class="header__img-top" src="images/' + page.imageTopSrc + '" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '"></div>' %}
+          {% set imageBottom = '<div class="page__img-container load load-2"><img class="header__img-bottom" src="images/' + page.imageBottomSrc + '" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '"></div>' %}
 
-        <section id="{{ page.id }}" class="page header is-active">
-          {{ imageTop | safe }}
-          {{ imageBottom | safe }}
-        </section>
+          <section id="{{ page.id }}" class="page header is-active">
+            {{ imageTop | safe }}
+            {{ imageBottom | safe }}
+          </section>
 
-      {% elseif page.typeIntro %}
+        {% elseif page.typeIntro %}
 
-        <section id="{{ page.id }}" class="page">
-          <div class="{{ page.classes }}">{{ page.text | safe }}</div>
-        </section>
+          <section id="{{ page.id }}" class="page">
+            <div class="{{ page.classes }} load load-1">{{ page.text | safe }}</div>
+          </section>
 
-      {% elseif page.typeSingleText %}
+        {% elseif page.typeSingleText %}
 
-        <section id="{{ page.id }}" class="page {{ page.classes }}">
-          <div class="page__text">{{ page.text | safe }}</div>
-        </section>
+          <section id="{{ page.id }}" class="page {{ page.classes }}">
+            <div class="page__text load load-1">{{ page.text | safe }}</div>
+          </section>
 
-      {% elseif page.typeSingleImage %}
+        {% elseif page.typeSingleImage %}
 
-        <section id="{{ page.id }}" class="page {{ page.classes }}">
-          <img src="images/{{ page.imageSrc }}" alt="{{ page.imageAlt }}" width="{{ page.imageWidth }}">
-        </section>
+          <section id="{{ page.id }}" class="page {{ page.classes }}">
+            <div class="page__img-container load load-1"><img class="page__img" src="images/{{ page.imageSrc }}" alt="{{ page.imageAlt }}" width="{{ page.imageWidth }}"></div>
+          </section>
 
-      {% endif %}
-    {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <button class="nav nav--prev js-prev-page">Prev</button>
+    <button class="nav nav--next js-next-page">Next</button>
   </main>
 
 {% endblock %}

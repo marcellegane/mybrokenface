@@ -1,0 +1,27 @@
+.load {
+  .js & {
+    transform: translateY(1em);
+    opacity: 0;
+    transition: opacity 0.2s ease,
+                transform 0s ease 0.2s;
+  }
+
+  .is-active & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &-1 {
+    .is-active & {
+      transition: opacity 0.1s ease 0.3s,
+                  transform 0.2s ease 0.3s;
+    }
+  }
+
+  &-2 {
+    .is-active & {
+      transition: opacity 0.1s ease 0.4s,
+                  transform 0.2s ease 0.4s;
+    }
+  }
+}

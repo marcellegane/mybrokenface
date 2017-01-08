@@ -12,13 +12,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
-    display: none;
 
     &.is-active {
       position: relative;
-      opacity: 1;
-      display: flex;
     }
   }
 
@@ -54,6 +50,11 @@
     @include media($medium-screen-up) {
       font-size: em(23);
     }
+  }
+
+  &__img-container {
+    display: block;
+    width: 100%;
   }
 
   &__img {
