@@ -18,9 +18,13 @@
 
   &--prev {
     left: 0;
+
+    &:hover { cursor: url(../images/arrow-left.svg), default; }
   }
 
   &--next {
     right: 0;
+
+    &:hover { cursor: url(../images/arrow-right.svg), default; }
   }
 }
