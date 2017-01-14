@@ -1,6 +1,6 @@
 .load {
   .js & {
-    transform: translateY(1em);
+    transform: translateY(2rem);
     opacity: 0;
     transition: opacity 0.2s ease,
                 transform 0s ease 0.2s;
@@ -13,15 +13,15 @@
 
   &-1 {
     .is-active & {
-      transition: opacity 0.1s ease 0.3s,
-                  transform 0.2s ease 0.3s;
+      transition: opacity 0.2s ease 0.3s,
+                  transform 0.3s cubic-bezier(0.46, 0.88, 0.43, 1.41) 0.3s;
     }
   }
 
   &-2 {
     .is-active & {
-      transition: opacity 0.1s ease 0.4s,
-                  transform 0.2s ease 0.4s;
+      transition: opacity 0.2s ease 0.5s,
+                  transform 0.3s cubic-bezier(0.46, 0.88, 0.43, 1.41) 0.5s;
     }
   }
 }
