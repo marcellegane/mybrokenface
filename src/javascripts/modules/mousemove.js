@@ -10,7 +10,7 @@ const moveImages = (e) => {
   const yValue = y / $(window).height() - 0.5;
 
   $pageImages.css({
-    transform: `translate(${xValue * -2}%, 0) translateZ(0) rotate(${yValue * -2}deg)`
+    transform: `translate(${xValue * 2}%, ${yValue * 2}%) translateZ(0)`
   });
 };
 

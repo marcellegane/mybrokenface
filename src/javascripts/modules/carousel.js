@@ -1,7 +1,8 @@
 const carouselInit = () => {
   const $prevPage = $(`.js-prev-page`);
   const $nextPage = $(`.js-next-page`);
-  const $pages = $(`.page`);
+  const $pages = $(`.js-page`);
+  const $menuLink = $(`.js-menu-link`);
   const pagesLength = $pages.length;
   const activeClass = `is-active`;
   let pageIndex = 0;
@@ -23,8 +24,18 @@ const carouselInit = () => {
     showPage();
   };
 
+  const setPageIndex = (e) => {
+    const index = $(e.currentTarget).attr(`href`).substring(1);
+
+    e.preventDefault();
+    pageIndex = index - 1;
+
+    showPage();
+  };
+
   $nextPage.on(`click`, lowerPageIndex);
   $prevPage.on(`click`, increasePageIndex);
+  $menuLink.on(`click`, setPageIndex);
 };
 
 export { carouselInit };

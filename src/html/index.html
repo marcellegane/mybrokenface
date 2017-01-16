@@ -12,7 +12,7 @@
             {% set imgLoadClass = ' load load-2' %}
           {% endif %}
           {% set image = '<div class="page__img-container' + imgLoadClass + '"><img class="page__img" src="images/' + page.imageSrc + '" alt="' + page.imageAlt + '" width="' + page.imageWidth + '"></div>' %}
-          <section id="{{ page.id }}" class="page page--main">
+          <section id="{{ page.id }}" class="page page--main js-page">
             {% if page.imageFirst %}
               {{ image | safe }}
               <p class="page__text load load-2">{{ page.text | safe }}</p>
@@ -27,26 +27,26 @@
           {% set imageTop = '<div class="page__img-container load load-1"><img class="header__img-top" src="images/' + page.imageTopSrc + '" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '"></div>' %}
           {% set imageBottom = '<div class="page__img-container load load-2"><img class="header__img-bottom" src="images/' + page.imageBottomSrc + '" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '"></div>' %}
 
-          <section id="{{ page.id }}" class="page header is-active">
+          <section id="{{ page.id }}" class="page header is-active js-page">
             {{ imageTop | safe }}
             {{ imageBottom | safe }}
           </section>
 
         {% elseif page.typeIntro %}
 
-          <section id="{{ page.id }}" class="page">
+          <section id="{{ page.id }}" class="page js-page">
             <div class="{{ page.classes }} load load-1">{{ page.text | safe }}</div>
           </section>
 
         {% elseif page.typeSingleText %}
 
-          <section id="{{ page.id }}" class="page {{ page.classes }}">
+          <section id="{{ page.id }}" class="page {{ page.classes }} js-page">
             <div class="page__text load load-1">{{ page.text | safe }}</div>
           </section>
 
         {% elseif page.typeSingleImage %}
 
-          <section id="{{ page.id }}" class="page {{ page.classes }}">
+          <section id="{{ page.id }}" class="page {{ page.classes }} js-page">
             <div class="page__img-container load load-1"><img class="page__img" src="images/{{ page.imageSrc }}" alt="{{ page.imageAlt }}" width="{{ page.imageWidth }}"></div>
           </section>
 
@@ -55,6 +55,16 @@
     </div>
     <button class="nav nav--prev js-prev-page">Prev</button>
     <button class="nav nav--next js-next-page">Next</button>
+
+    <nav class="menu">
+      <ul class="menu__list">
+        {% for image in pages %}
+          {% if image.typeMain %}
+            <li class="menu__item"><a class="menu__link js-menu-link" href="#{{ image.id }}"><img class="menu__img" src="images/{{ image.imageSrc }}" alt="{{ image.imageAlt }}"></a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
   </main>
 
 {% endblock %}
