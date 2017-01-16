@@ -56,11 +56,13 @@
     <button class="nav nav--prev js-prev-page">Prev</button>
     <button class="nav nav--next js-next-page">Next</button>
 
-    <nav class="menu">
+    <nav class="menu js-menu">
       <ul class="menu__list">
         {% for image in pages %}
           {% if image.typeMain %}
-            <li class="menu__item"><a class="menu__link js-menu-link" href="#{{ image.id }}"><img class="menu__img" src="images/{{ image.imageSrc }}" alt="{{ image.imageAlt }}"></a></li>
+            <li class="menu__item">
+              <a class="menu__link js-menu-link" href="#{{ image.id }}" data-id="{{ image.id }}"><img class="menu__img" src="images/{{ image.imageSrc }}" alt="{{ image.imageAlt }}"></a>
+            </li>
           {% endif %}
         {% endfor %}
       </ul>
