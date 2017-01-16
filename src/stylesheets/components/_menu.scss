@@ -15,13 +15,16 @@
     list-style: none;
   }
 
-  &__item {
-
-  }
-
   &__link {
     display: block;
     padding: em(6);
+    transition: transform 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.3);
+    }
   }
 
   &__img {
