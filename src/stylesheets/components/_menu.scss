@@ -6,9 +6,12 @@
   display: none;
 
   .js & {
-    display: flex;
     opacity: 0;
     transition: opacity 0.5s ease;
+
+    @include media(min-width em(768) min-height em(768)) {
+      display: flex;
+    }
   }
 
   &.is-active {
@@ -54,7 +57,7 @@
     &:active,
     &.is-active {
       opacity: 1;
-      transform: translateX(0.3em) scale(1.3);
+      transform: translateX(0.3em) translateZ(0) scale(1.3);
     }
   }
 }

@@ -1,27 +1,27 @@
 .load {
   .js & {
-    transform: translateY(2rem);
+    transform: translateY(2rem) translateZ(0);
     opacity: 0;
-    transition: opacity 0.2s ease,
-                transform 0s ease 0.2s;
+    transition: opacity #{$page-transition - 0.1}s ease,
+                transform 0s ease #{$page-transition - 0.1}s;
   }
 
   .is-active & {
-    transform: translateY(0);
+    transform: translateY(0) translateZ(0);
     opacity: 1;
   }
 
   &-1 {
     .is-active & {
-      transition: opacity 0.2s ease 0.3s,
-                  transform 0.3s cubic-bezier(0.46, 0.88, 0.43, 1.41) 0.3s;
+      transition: opacity #{$page-transition - 0.1}s ease #{$page-transition}s,
+                  transform #{$page-transition}s cubic-bezier(0.46, 0.88, 0.43, 1.41) #{$page-transition}s;
     }
   }
 
   &-2 {
     .is-active & {
-      transition: opacity 0.2s ease 0.5s,
-                  transform 0.3s cubic-bezier(0.46, 0.88, 0.43, 1.41) 0.5s;
+      transition: opacity #{$page-transition - 0.1}s ease #{$page-transition + 0.2}s,
+                  transform #{$page-transition}s cubic-bezier(0.46, 0.88, 0.43, 1.41) #{$page-transition + 0.2}s;
     }
   }
 }
