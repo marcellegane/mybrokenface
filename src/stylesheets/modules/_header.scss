@@ -9,6 +9,7 @@
 
   &__img-top {
     width: 72.8%;
+    max-width: em(968);
     margin-top: 2em;
 
     @include media($medium-screen-up) {
@@ -18,6 +19,7 @@
 
   &__img-bottom {
     width: 63.7%;
+    max-width: em(850);
     margin-bottom: 2em;
 
     @include media($medium-screen-up) {

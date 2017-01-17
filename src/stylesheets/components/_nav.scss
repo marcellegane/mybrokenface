@@ -19,12 +19,12 @@
   &--prev {
     left: 0;
 
-    &:hover { cursor: url(../images/arrow-left.svg), default; }
+    &:hover { cursor: url(../images/arrows/arrow-left-4.svg), default; }
   }
 
   &--next {
     right: 0;
 
-    &:hover { cursor: url(../images/arrow-right.svg), default; }
+    &:hover { cursor: url(../images/arrows/arrow-4.svg), default; }
   }
 }

@@ -4,10 +4,10 @@
     {
       "id": 1,
       "typeHome": true,
-      "imageTopSrc": "KateeBook_TitleTop.png",
+      "imageTopSrc": "slides/KateeBook_TitleTop.png",
       "imageTopAlt": "Reflections from a broken face",
       "imageTopWidth": "968",
-      "imageBottomSrc": "KateeBook_TitleBottom.png",
+      "imageBottomSrc": "slides/KateeBook_TitleBottom.png",
       "imageBottomAlt": "By Katee Hui, Illustrations by Kirstin Smith",
       "imageBottomWidth": "850"
     },
@@ -28,7 +28,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "I wish the A&E staff told me not to blow my nose.<br>Because when I did all my bones moved.<br>At least now I know it's broken.",
-      "imageSrc": "KateeBook_Kleenex.png",
+      "imageSrc": "slides/KateeBook_Kleenex.png",
       "imageAlt": "A box of Kleenex",
       "imageWidth": "247"
     },
@@ -37,7 +37,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "Somebody needs to put art on the ceilings of hospitals.",
-      "imageSrc": "KateeBook_Frame.png",
+      "imageSrc": "slides/KateeBook_Frame.png",
       "imageAlt": "A picture frame",
       "imageWidth": "363"
     },
@@ -46,7 +46,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "True love is a boyfriend that buys a food processor.",
-      "imageSrc": "KateeBook_FoodProcessor.png",
+      "imageSrc": "slides/KateeBook_FoodProcessor.png",
       "imageAlt": "A food processor",
       "imageWidth": "225"
     },
@@ -55,7 +55,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "Please don't ask me if it was painful.<br>I broke my face.<br>Of course it was painful.",
-      "imageSrc": "KateeBook_Mad.png",
+      "imageSrc": "slides/KateeBook_Mad.png",
       "imageAlt": "Katee with a black eye",
       "imageWidth": "268"
     },
@@ -64,7 +64,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "Today I walked 76 steps. It all counts.",
-      "imageSrc": "KateeBook_Feet.png",
+      "imageSrc": "slides/KateeBook_Feet.png",
       "imageAlt": "Katee's feet in socks",
       "imageWidth": "256"
     },
@@ -73,7 +73,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "Affogato: breakfast of champions. One part coffee, two parts ice cream.",
-      "imageSrc": "KateeBook_Mug.png",
+      "imageSrc": "slides/KateeBook_Mug.png",
       "imageAlt": "A mug of affogato",
       "imageWidth": "421"
     },
@@ -82,7 +82,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "Yawned for the first time today since the accident.",
-      "imageSrc": "KateeBook_Ouch.png",
+      "imageSrc": "slides/KateeBook_Ouch.png",
       "imageAlt": "Ouch",
       "imageWidth": "326"
     },
@@ -91,7 +91,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "Did you know that you can buy codeine over-the-counter?",
-      "imageSrc": "KateeBook_Pills.png",
+      "imageSrc": "slides/KateeBook_Pills.png",
       "imageAlt": "Codeine pills",
       "imageWidth": "344"
     },
@@ -100,7 +100,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "Top tip: baked camembert with a spoon is an excellent meal. So soft.",
-      "imageSrc": "KateeBook_Cheese.png",
+      "imageSrc": "slides/KateeBook_Cheese.png",
       "imageAlt": "Camembert",
       "imageWidth": "325"
     },
@@ -109,7 +109,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "There should be labels on hospital gowns so you know which way to wear them. Apparently mine is on backwards.",
-      "imageSrc": "KateeBook_Gown.png",
+      "imageSrc": "slides/KateeBook_Gown.png",
       "imageAlt": "Katee in a hospital gown",
       "imageWidth": "176"
     },
@@ -118,7 +118,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "Titanium has a 3000 degree Fahrenheit melting point and a hexagonal closed packed atomic structure. It's also corrosion resistant and has a ridiculously high tensile strength. Oh, and it doesn't set off metal detectors.",
-      "imageSrc": "KateeBook_MetalDetector.png",
+      "imageSrc": "slides/KateeBook_MetalDetector.png",
       "imageAlt": "Airport metal detectors",
       "imageWidth": "496"
     },
@@ -127,7 +127,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "Eye tests shouldn't spell real words. It's confusing. Do you read the letters or the words?",
-      "imageSrc": "KateeBook_Eyechart.png",
+      "imageSrc": "slides/KateeBook_Eyechart.png",
       "imageAlt": "Eye test chart",
       "imageWidth": "329"
     },
@@ -136,7 +136,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "Nurses have to put up with so much shit. And vomit (Sorry).",
-      "imageSrc": "KateeBook_NurseHat.png",
+      "imageSrc": "slides/KateeBook_NurseHat.png",
       "imageAlt": "Nurse's hat",
       "imageWidth": "328"
     },
@@ -145,7 +145,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "Why are there so many pistachios in bircher muesli?",
-      "imageSrc": "KateeBook_Porridge.png",
+      "imageSrc": "slides/KateeBook_Porridge.png",
       "imageAlt": "Bowel of muesli",
       "imageWidth": "390"
     },
@@ -154,7 +154,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "Thanksgiving. Today I'm thankful that I've never experienced domestic violence.<br>Because I've seen the way people look at me in public like I'm a victim. I'm only a victim of my own competitiveness. It must be hard for sufferers to hide their pain, repeatedly when everyone just stares at you.",
-      "imageSrc": "KateeBook_Fist.png",
+      "imageSrc": "slides/KateeBook_Fist.png",
       "imageAlt": "Solidarity fist",
       "imageWidth": "203"
     },
@@ -163,7 +163,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "My surgeon gets me to send him selfies (&ldquo;taken in good light&rdquo;) to monitor my progress. The NHS is amazing.",
-      "imageSrc": "KateeBook_Polaroid.png",
+      "imageSrc": "slides/KateeBook_Polaroid.png",
       "imageAlt": "Polaroids",
       "imageWidth": "379"
     },
@@ -172,7 +172,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "First solid meal today. Pizza.<br>It took 2 hours to eat and it was blissful.",
-      "imageSrc": "KateeBook_Pizza.png",
+      "imageSrc": "slides/KateeBook_Pizza.png",
       "imageAlt": "Pizza slice",
       "imageWidth": "371"
     },
@@ -181,7 +181,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "In my job contract it says that sick leave is covered in the event of an accident or injury except those &ldquo;sustained whilst playing a dangerous sport&rdquo;. Is football a dangerous sport?",
-      "imageSrc": "KateeBook_Parachut.png",
+      "imageSrc": "slides/KateeBook_Parachut.png",
       "imageAlt": "Parachutist",
       "imageWidth": "546"
     },
@@ -190,7 +190,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "It's a terrible idea to try and take out your own stitches with toe nail clippers. Let them dissolve on their own or leave it to the professionals.",
-      "imageSrc": "KateeBook_Stitches.png",
+      "imageSrc": "slides/KateeBook_Stitches.png",
       "imageAlt": "Stitches",
       "imageWidth": "360"
     },
@@ -199,7 +199,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "Today I walked past the scene of the accident. The physical scars have healed. Emotional ones have not.",
-      "imageSrc": "KateeBook_Goal.png",
+      "imageSrc": "slides/KateeBook_Goal.png",
       "imageAlt": "Goalposts",
       "imageWidth": "647"
     },
@@ -208,7 +208,7 @@
       "typeMain": true,
       "imageFirst": true,
       "text": "Opiate withdrawal can manifest itself in a lot of ways. For example a face rash.",
-      "imageSrc": "KateeBook_Rash.png",
+      "imageSrc": "slides/KateeBook_Rash.png",
       "imageAlt": "Face with rash",
       "imageWidth": "253"
     },
@@ -217,7 +217,7 @@
       "typeMain": true,
       "imageFirst": false,
       "text": "12 more days until medical clearance.<br>6 weeks have now passed. Can I be better now?",
-      "imageSrc": "KateeBook_Calendar.png",
+      "imageSrc": "slides/KateeBook_Calendar.png",
       "imageAlt": "Flip calendar",
       "imageWidth": "333"
     },
@@ -229,7 +229,7 @@
     {
       "id": 27,
       "typeSingleImage": true,
-      "imageSrc": "KateeBook_Mirror.png",
+      "imageSrc": "slides/KateeBook_Mirror.png",
       "imageAlt": "Handheld mirror",
       "imageWidth": "198"
     }

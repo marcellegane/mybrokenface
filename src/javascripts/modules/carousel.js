@@ -11,11 +11,8 @@ const carouselInit = () => {
   const activeClass = `is-active`;
   let pageIndex = 0;
 
-  const showPage = () => {
-    $pages.removeClass(activeClass);
-    $pages.eq(pageIndex).addClass(activeClass);
-
-    if (pageIndex >= firstImgId && pageIndex <= lastImgId) {
+  const showMenu = () => {
+    if (pageIndex > firstImgId) {
       $menu.addClass(activeClass);
     } else {
       $menu.removeClass(activeClass);
@@ -24,6 +21,13 @@ const carouselInit = () => {
     $menuLink.removeClass(activeClass);
     $menu.find(`[data-id="${pageIndex + 1}"]`)
       .addClass(activeClass);
+  };
+
+  const showPage = () => {
+    $pages.removeClass(activeClass);
+    $pages.eq(pageIndex).addClass(activeClass);
+
+    showMenu();
   };
 
   const increasePageIndex = () => {
