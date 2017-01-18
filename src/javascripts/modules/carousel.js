@@ -1,4 +1,9 @@
+import $ from 'jquery';
+import { TweenLite, CSSPlugin } from 'gsap';
+window.$ = $;
+
 const carouselInit = () => {
+  const $carousel = $(`.js-carousel`);
   const $prevPage = $(`.js-prev-page`);
   const $nextPage = $(`.js-next-page`);
   const $pages = $(`.js-page`);
@@ -9,6 +14,7 @@ const carouselInit = () => {
   const lastImgId = $menuLink.eq(menuLength - 1).data(`id`) - 1;
   const pagesLength = $pages.length;
   const activeClass = `is-active`;
+  const loadClass = `is-loaded`;
   let pageIndex = 0;
 
   const showMenu = () => {
@@ -24,8 +30,20 @@ const carouselInit = () => {
   };
 
   const showPage = () => {
-    $pages.removeClass(activeClass);
-    $pages.eq(pageIndex).addClass(activeClass);
+    const $currPage = $carousel.find(`.${activeClass}`);
+    const $nextPage = $pages.eq(pageIndex);
+
+    TweenLite.to($currPage, 0.2, {
+      opacity: 0,
+      clearProps: `opacity`,
+      onComplete: () => {
+        $currPage.removeClass(`${activeClass} ${loadClass}`);
+        $nextPage.addClass(activeClass);
+        TweenLite.set($nextPage, {
+          className: `+=${loadClass}`,
+        });
+      }
+    });
 
     showMenu();
   };
