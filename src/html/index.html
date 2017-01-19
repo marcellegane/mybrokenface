@@ -27,7 +27,7 @@
           {% set imageTop = '<div class="page__img-container load load-1"><img class="header__img-top" src="images/' + page.imageTopSrc + '" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '"></div>' %}
           {% set imageBottom = '<div class="page__img-container load load-2"><img class="header__img-bottom" src="images/' + page.imageBottomSrc + '" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '"></div>' %}
 
-          <section id="{{ page.id }}" class="page header is-active is-loaded js-page">
+          <section id="{{ page.id }}" class="page header js-page">
             {{ imageTop | safe }}
             {{ imageBottom | safe }}
           </section>

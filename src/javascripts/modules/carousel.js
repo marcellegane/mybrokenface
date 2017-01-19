@@ -10,12 +10,12 @@ const carouselInit = () => {
   const $menu = $(`.js-menu`);
   const $menuLink = $(`.js-menu-link`);
   const menuLength = $menuLink.length;
-  const firstImgId = $menuLink.eq(0).data(`id`) - 1;
+  const firstImgId = 1;
   const lastImgId = $menuLink.eq(menuLength - 1).data(`id`) - 1;
   const pagesLength = $pages.length;
   const activeClass = `is-active`;
   const loadClass = `is-loaded`;
-  let pageIndex = 0;
+  let pageIndex = 1;
 
   const showMenu = () => {
     if (pageIndex > firstImgId) {
@@ -25,13 +25,16 @@ const carouselInit = () => {
     }
 
     $menuLink.removeClass(activeClass);
-    $menu.find(`[data-id="${pageIndex + 1}"]`)
-      .addClass(activeClass);
+    $menu.find(`[data-id="${pageIndex}"]`)
+      .addClass(activeClass)
+      .focus();
   };
 
   const showPage = () => {
     const $currPage = $carousel.find(`.${activeClass}`);
-    const $nextPage = $pages.eq(pageIndex);
+    const $nextPage = $pages.eq(pageIndex - 1);
+
+    window.location.hash = pageIndex;
 
     TweenLite.to($currPage, 0.2, {
       opacity: 0,
@@ -48,30 +51,91 @@ const carouselInit = () => {
     showMenu();
   };
 
-  const increasePageIndex = () => {
-    pageIndex = pageIndex === 0 ? pagesLength - 1 : pageIndex - 1;
+  const lowerPageIndex = () => {
+    pageIndex = pageIndex === 1 ? pagesLength : pageIndex - 1;
 
     showPage();
   };
 
-  const lowerPageIndex = () => {
-    pageIndex = pageIndex === pagesLength - 1 ? 0 : pageIndex + 1;
+  const increasePageIndex = () => {
+    pageIndex = pageIndex === pagesLength ? 1 : pageIndex + 1;
 
     showPage();
   };
 
   const setPageIndex = (e) => {
-    const index = $(e.currentTarget).attr(`href`).substring(1);
-
     e.preventDefault();
-    pageIndex = index - 1;
-
+    pageIndex = parseInt($(e.currentTarget).attr(`href`).substring(1));
+    window.location.hash = pageIndex;
     showPage();
   };
 
-  $nextPage.on(`click`, lowerPageIndex);
-  $prevPage.on(`click`, increasePageIndex);
+  const swipeInit = () => {
+    let xDown = null;
+    let yDown = null;
+    let doTouchBreak = null;
+    const minDelta = 100;
+
+    const handleTouchEnd = () => {
+      doTouchBreak = null;
+    };
+
+    const handleTouchStart = (evt) => {
+      xDown = evt.touches[0].clientX;
+      yDown = evt.touches[0].clientY;
+    };
+
+    const handleTouchMove = (evt) => {
+      if ( !xDown || !yDown || doTouchBreak) {
+        return false;
+      }
+
+      const xUp = evt.touches[0].clientX;
+      const yUp = evt.touches[0].clientY;
+      const xDiff = xDown - xUp;
+      const yDiff = yDown - yUp;
+
+      if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+        if ( xDiff > minDelta ) {
+          increasePageIndex();
+          doTouchBreak = true;
+        } else if ( xDiff < -minDelta) {
+          lowerPageIndex();
+          doTouchBreak = true;
+        }
+      }
+
+      if (doTouchBreak) {
+        xDown = null;
+        yDown = null;
+      }
+    };
+
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+    document.addEventListener('touchend', handleTouchEnd, false);
+    document.addEventListener('touchcancel', handleTouchEnd, false);
+  };
+
+  if (window.location.hash) {
+    const hash = window.location.hash;
+    pageIndex = parseInt(hash.substring(1));
+    showPage();
+  } else {
+    showPage();
+  }
+
+  $prevPage.on(`click`, lowerPageIndex);
+  $nextPage.on(`click`, increasePageIndex);
   $menuLink.on(`click`, setPageIndex);
+  swipeInit();
+
+  $(`body`).keydown(function(e) {
+    // Left, up, backspace
+    if (e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 8) { lowerPageIndex(); }
+    // Right, down
+    else if (e.keyCode == 39 || e.keyCode == 40) { increasePageIndex(); }
+  });
 };
 
 export { carouselInit };

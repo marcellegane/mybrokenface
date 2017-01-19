@@ -48,13 +48,13 @@
     opacity: 0.5;
     transition: all 0.2s ease;
 
-    &:focus {
+    &:focus,
+    &:active {
+      opacity: 1;
       outline: none;
     }
 
     &:hover,
-    &:focus,
-    &:active,
     &.is-active {
       opacity: 1;
       transform: translateX(0.3em) translateZ(0) scale(1.3);

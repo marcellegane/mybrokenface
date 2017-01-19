@@ -6,14 +6,19 @@
   overflow: hidden;
   background: none;
   border: none;
+  outline: none;
   white-space: nowrap;
   text-indent: 110%;
   cursor: pointer;
 
   &:hover,
   &:active,
-  &:focus {
+  &:focus,
+  &:visited {
     outline: none;
+    background: none;
+    border: none;
+    box-shadow: none;
   }
 
   &--prev {
