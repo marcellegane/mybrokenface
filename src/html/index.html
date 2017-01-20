@@ -11,7 +11,7 @@
           {% else %}
             {% set imgLoadClass = ' load load-2' %}
           {% endif %}
-          {% set image = '<div class="page__img-container' + imgLoadClass + '"><img class="page__img" src="images/' + page.imageSrc + '" alt="' + page.imageAlt + '" width="' + page.imageWidth + '"></div>' %}
+          {% set image = '<div class="page__img-container' + imgLoadClass + '"><img class="page__img" src="images/' + page.imageSrc + '" srcset="images/' + page.imageSrcRetina + ' 2x" alt="' + page.imageAlt + '" width="' + page.imageWidth + '"></div>' %}
           <section id="{{ page.id }}" class="page page--main js-page">
             {% if page.imageFirst %}
               {{ image | safe }}
@@ -24,8 +24,8 @@
 
         {% elseif page.typeHome %}
 
-          {% set imageTop = '<div class="page__img-container load load-1"><img class="header__img-top" src="images/' + page.imageTopSrc + '" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '"></div>' %}
-          {% set imageBottom = '<div class="page__img-container load load-2"><img class="header__img-bottom" src="images/' + page.imageBottomSrc + '" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '"></div>' %}
+          {% set imageTop = '<div class="page__img-container load load-1"><img class="header__img-top" src="images/' + page.imageTopSrc + '" srcset="images/' + page.imageTopSrcRetina + ' 2x" alt="' + page.imageTopAlt + '" width="' + page.imageTopWidth + '"></div>' %}
+          {% set imageBottom = '<div class="page__img-container load load-2"><img class="header__img-bottom" src="images/' + page.imageBottomSrc + '" srcset="images/' + page.imageBottomSrcRetina + ' 2x" alt="' + page.imageBottomAlt + '" width="' + page.imageBottomWidth + '"></div>' %}
 
           <section id="{{ page.id }}" class="page header js-page">
             {{ imageTop | safe }}
@@ -47,7 +47,7 @@
         {% elseif page.typeSingleImage %}
 
           <section id="{{ page.id }}" class="page {{ page.classes }} js-page">
-            <div class="page__img-container load load-1"><img class="page__img" src="images/{{ page.imageSrc }}" alt="{{ page.imageAlt }}" width="{{ page.imageWidth }}"></div>
+            <div class="page__img-container load load-1"><img class="page__img" src="images/{{ page.imageSrc }}" srcset="images/{{ page.imageSrc }} 2x" alt="{{ page.imageAlt }}" width="{{ page.imageWidth }}"></div>
           </section>
 
         {% endif %}
